@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Vida y Salud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo">🏥 Hospital Vida y Salud</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="hero">
+        <h1>Bienvenidos al Hospital Vida y Salud</h1>
+        <p>Tu salud es nuestra prioridad. Atención médica de calidad para toda la familia.</p>
+        <button class="btn" onclick="mostrarMensaje()">Agendar Cita</button>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <h3>🩺 Consulta General</h3>
+                <p>Atención médica integral para todas las edades.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>🏥 Urgencias</h3>
+                <p>Servicio disponible las 24 horas del día.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>🔬 Laboratorio</h3>
+                <p>Análisis clínicos con resultados rápidos.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>💉 Vacunación</h3>
+                <p>Esquemas completos de vacunación.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una institución comprometida con el bienestar de nuestra comunidad. Contamos con un equipo de médicos especialistas, tecnología de punta y un trato humano.</p>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos</h2>
+        <form id="formContacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" rows="5" required></textarea>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+        <p id="respuesta"></p>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Hospital Vida y Salud - Todos los derechos reservados</p>
+        <p>📍 Victoria, Caldas | 📞 +57 123 456 7890</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

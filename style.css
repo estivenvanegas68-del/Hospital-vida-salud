@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navegación */
+.navbar {
+    background: #0056b3;
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffc107;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Sección Inicio */
+.hero {
+    background: linear-gradient(rgba(0,86,179,0.8), rgba(0,86,179,0.6)), url('https://images.unsplash.com/photo-1586773860117-0d2e49d9e58a?w=1200');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    margin-top: 60px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.btn {
+    background: #ffc107;
+    color: #000;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e0a800;
+}
+
+/* Sección Servicios */
+.servicios {
+    padding: 4rem 5%;
+    background: #f8f9fa;
+}
+
+.servicios h2 {
+    text-align: center;
+    color: #0056b3;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.servicio-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+}
+
+.servicio-card h3 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+}
+
+/* Sección Nosotros */
+.nosotros {
+    padding: 4rem 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nosotros h2 {
+    color: #0056b3;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.nosotros p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Sección Contacto */
+.contacto {
+    padding: 4rem 5%;
+    background: #f8f9fa;
+}
+
+.contacto h2 {
+    text-align: center;
+    color: #0056b3;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contacto label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#respuesta {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: green;
+}
+
+/* Pie de página */
+footer {
+    background: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #0056b3;
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 1rem;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
